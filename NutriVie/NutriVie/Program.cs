@@ -1,8 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using NutriVie.Models.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<NutrieVieDbContext>(options => {
 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NutriVieConnection"));
+
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
