@@ -20,8 +20,5 @@
             @Html.DisplayFor(model => model.Nom)
         </dd>
     </dl>
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <partial name="_BoutonDelete" />
-    </form>
+    <partial name="_EditButtonsPartial" />
 </div>
