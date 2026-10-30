@@ -15,23 +15,20 @@
             <th>
                 @Html.DisplayNameFor(model => model.Nom)
             </th>
-            <th>
+            <th style="width: 250px;">
                 @Html.DisplayNameFor(model => model.Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TempsPreparation)
+                Durée (min)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TempsCuisson)
+                Cuisson (min)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Image)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CategorieId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categorie)
+                Catégorie
             </th>
             <th></th>
         </tr>
@@ -40,25 +37,25 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(model => item.Nom)
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td style="width: 250px;">
+                @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(model => item.Description)
+                @Html.DisplayFor(modelItem => item.TempsPreparation)
             </td>
             <td>
-                @Html.DisplayFor(model => item.TempsPreparation)
+                @Html.DisplayFor(modelItem => item.TempsCuisson)
             </td>
             <td>
-                @Html.DisplayFor(model => item.TempsCuisson)
+                @if (!string.IsNullOrEmpty(item.Image))
+                {
+                    <img src="~/images/@item.Image" style="width: 150px;" alt="@item.Nom" />
+                }
             </td>
             <td>
-                @Html.DisplayFor(model => item.Image)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.CategorieId)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Categorie)
+                @Html.DisplayFor(modelItem => item.Categorie.Nom)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

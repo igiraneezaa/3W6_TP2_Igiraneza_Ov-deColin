@@ -26,13 +26,13 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="TempsPreparation" class="control-label"></label>
+                <label asp-for="TempsPreparation" class="control-label">Durée (min)</label>
                 <input asp-for="TempsPreparation" class="form-control" />
                 <span asp-validation-for="TempsPreparation" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="TempsCuisson" class="control-label"></label>
+                <label asp-for="TempsCuisson" class="control-label">Cuisson (min)</label>
                 <input asp-for="TempsCuisson" class="form-control" />
                 <span asp-validation-for="TempsCuisson" class="text-danger"></span>
             </div>
@@ -44,17 +44,11 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="CategorieId" class="control-label"></label>
-                <input asp-for="CategorieId" class="form-control" />
-                <span asp-validation-for="CategorieId" class="text-danger"></span>
+                <label asp-for="CategorieId" class="control-label">Catégorie</label>
+                <select asp-for="CategorieId" class="form-control" asp-items="ViewBag.CategorieId"></select>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Categorie" class="control-label"></label>
-                <input asp-for="Categorie" class="form-control" />
-                <span asp-validation-for="Categorie" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
