@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<NutrieVieDbContext>(options => {
 
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NutriVieConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NutriVieEF"));
 
 });
 var app = builder.Build();
