@@ -46,13 +46,11 @@
             <div class="form-group">
                 <label asp-for="CategorieId" class="control-label">Catégorie</label>
                 <select asp-for="CategorieId" class="form-control" asp-items="ViewBag.CategorieId"></select>
-            </div>
-
-            <partial name="_CreateButtonsPartial" />
+            </div>            
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <partial name="_CreateButtonsPartial" />
 </div>
