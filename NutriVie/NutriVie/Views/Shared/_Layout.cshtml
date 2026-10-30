@@ -10,63 +10,60 @@
     <link rel="stylesheet" href="~/TP2_solution.styles.css" asp-append-version="true" />
 </head>
 <body>
-
+ 
     <header>
-
         <div class="wrapper">
             <div class="logo">
                 <a asp-area="" asp-controller="Home" asp-action="Index">NutriVie</a>
             </div>
-
+ 
             <nav>
                 <ul>
                     <li>
                         <a asp-area="" asp-controller="Home" asp-action="Index">Accueil</a>
                     </li>
                     <li>
-                        <a asp-area="">Catégories</a>
+                        <a asp-area="" asp-controller="Categories" asp-action="Index">Catégories</a>
                     </li>
                     <li>
-                        <a asp-area="">Recettes</a>
+                        <a asp-area="" asp-controller="Recettes" asp-action="Index">Recettes</a>
                     </li>
                 </ul>
             </nav>
-
         </div>
     </header>
-
+ 
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
+ 
     <footer>
         <div class="wrapper">
             <nav>
                 <div class="logo">
                     <a asp-area="" asp-controller="Home" asp-action="Index">NutriVie</a>
                 </div>
-
             
                 <ul>
                     <li>
                         <a asp-area="" asp-controller="Home" asp-action="Index">Accueil</a>
                     </li>
                     <li>
-                        <a asp-area="">Catégories</a>
+                        <a asp-area="" asp-controller="Categories" asp-action="Index">Catégories</a>
                     </li>
                     <li>
-                        <a asp-area="">Recettes</a>
+                        <a asp-area="" asp-controller="Recettes" asp-action="Index">Recettes</a>
                     </li>
                 </ul>
             </nav>
             <hr>
             <div class="bottom">
                 <p>© 2026 NutriVie - Tous droits réservés.</p>
-
+ 
                 <a href="mailto:contact@nutrivie.com" class="btn btn-primary">Nous contacter</a>
-
+ 
                 <nav class="social">
                     <ul>
                         <li>
